@@ -67,8 +67,8 @@ nnoremap <SPACE> :wa<CR>
 "---------------------------------------------------------------------------------
 " this may be or /is necessary for gnome-terminal
 let g:gruvbox_italic=1
-colorscheme gruvbox     
-set background=dark
+"colorscheme gruvbox     
+set background=light
 
 " Plugins will be downloaded and installed under the specified directory.
 
@@ -100,8 +100,12 @@ let g:airline#extensions#tabline#enabled = 1
 		" 	deus
 		" 	zenburn
 		" 	base16
-let g:airline_theme='deus'
+let g:airline_theme='base16'
 
 " allow folds to be saved
 "
 "
+"dracula theme
+packadd! dracula
+colorscheme dracula
+

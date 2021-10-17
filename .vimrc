@@ -1,5 +1,7 @@
 " standard syntax & numbering
 " Shows numbers based on the location of the cursor
+" TIP: mV will mark the vimrc file so that if you have vim open you can go to
+" that mark to reedit your vimrc file by pressing 'V
 set number
 set relativenumber
 set cursorline
@@ -69,13 +71,14 @@ nnoremap <SPACE> :wa<CR>
 " remap escape to jk in insert mode
 inoremap jk <ESC>
 
+"let the leader be key: '. TIP: you can also have different leaders for different
+"things
+let mapleader = "'"
+
 " remove highlights after a search
 map <leader>h :noh<CR> 
 
-"let the leader be key: '. TIP: you can also have different leaders for different
-"things
 
-let mapleader = "'"
 
 "show search results as you type them
 set incsearch

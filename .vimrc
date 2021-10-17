@@ -1,9 +1,11 @@
 " standard syntax & numbering
-"---------------------------------------------------------------------------------
 " Shows numbers based on the location of the cursor
 set number
 set relativenumber
+set cursorline
 syntax on
+
+set guifont=Ubuntu\ Mono\ 15
 
 " check spelling
 set spell spelllang=en_us
@@ -12,7 +14,7 @@ set spell spelllang=en_us
 set hidden
 
 " no wrap: dont move offscreen text to new line
-set nowrap
+"set nowrap
 
 " eg) default tap space = 8, now 4
 set tabstop=4 
@@ -27,6 +29,7 @@ set smartcase
 set autoindent
 set smartindent
 set smarttab
+
 
 "Ctags/paths
 "---------------------------------------------------------------------------------
@@ -44,7 +47,7 @@ set autoread
 " Display all matching files when tab completed
 set wildmenu 
 
-"remappings keys
+"custom key remappings
 "---------------------------------------------------------------------------------
 " this is to remap moving between buffer splits
 " 	note: this overrides the <CTR-W-h> :horizontal split
@@ -63,32 +66,36 @@ nnoremap <C-down> :bp<CR>
 " mapping space to saving files if in normal mode
 nnoremap <SPACE> :wa<CR>
 
+" remap escape to jk in insert mode
+inoremap jk <ESC>
+
+" remove highlights after a search
+map <leader>h :noh<CR> 
+
+"let the leader be key: '. TIP: you can also have different leaders for different
+"things
+
+let mapleader = "'"
+
+"show search results as you type them
+set incsearch
+"turn on highlighting search
+set hlsearch
+
+
+"disable the swap file
+
+
 " prettify vim: color scheme / plugin manager / airline_tails
 "---------------------------------------------------------------------------------
-" this may be or /is necessary for gnome-terminal
-let g:gruvbox_italic=1
-"colorscheme gruvbox     
-set background=light
 
 " Plugins will be downloaded and installed under the specified directory.
-
-" Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-" Run PlugInstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
 " 	this is status line plug
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -105,7 +112,12 @@ let g:airline_theme='base16'
 " allow folds to be saved
 "
 "
-"dracula theme
+"add dracula theme
 packadd! dracula
 colorscheme dracula
+
+" this may be or /is necessary for gnome-terminal
+"let g:gruvbox_italic=1
+"colorscheme gruvbox     
+"set background=dark
 

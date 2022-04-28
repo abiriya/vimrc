@@ -9,9 +9,6 @@ syntax on
 
 set guifont=Ubuntu\ Mono\ 15
 
-" check spelling
-set spell spelllang=en_us
-
 " set hidden: means we don't have to save before switching buffers
 set hidden
 
@@ -85,42 +82,11 @@ set incsearch
 "turn on highlighting search
 set hlsearch
 
+" highlight tab characters
+set listchars=tab:>-
+highlight SpecialKey guifg=red ctermfg=red
+set list
 
-"disable the swap file
-
-
-" prettify vim: color scheme / plugin manager / airline_tails
-"---------------------------------------------------------------------------------
-
-" Plugins will be downloaded and installed under the specified directory.
-call plug#begin('~/.vim/plugged')
-
-" Declare the list of plugins.
-" 	this is status line plug
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
-
-" smarter tabline, displays buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" set theme from airline plugin  
-	" favorite themes
-		" 	deus
-		" 	zenburn
-		" 	base16
-let g:airline_theme='base16'
-
-" allow folds to be saved
-"
-"
-"add dracula theme
-packadd! dracula
+packadd! dracula 
+syntax enable
 colorscheme dracula
-
-" this may be or /is necessary for gnome-terminal
-"let g:gruvbox_italic=1
-"colorscheme gruvbox     
-"set background=dark
-

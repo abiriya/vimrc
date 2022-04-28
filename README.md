@@ -1,2 +1,2 @@
 # vimrc
-backup of my .vimrcfile
+backup of my .vimrcfile and tmux conf

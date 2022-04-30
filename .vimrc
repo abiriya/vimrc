@@ -16,9 +16,9 @@ set hidden
 "set nowrap
 
 " eg) default tap space = 8, now 4
-set tabstop=4 
+set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " ignore makes searches case sensetive/insensetive depending on input
 set ignorecase
@@ -44,13 +44,13 @@ set tags=tags;
 set autoread
 
 " Display all matching files when tab completed
-set wildmenu 
+set wildmenu
 
 "custom key remappings
 "---------------------------------------------------------------------------------
 " this is to remap moving between buffer splits
-" 	note: this overrides the <CTR-W-h> :horizontal split
-nnoremap <C-h> <C-w>h 
+" note: this overrides the <CTR-W-h> :horizontal split
+nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
@@ -73,7 +73,7 @@ inoremap jk <ESC>
 let mapleader = "'"
 
 " remove highlights after a search
-map <leader>h :noh<CR> 
+map <leader>h :noh<CR>
 
 
 
@@ -83,10 +83,14 @@ set incsearch
 set hlsearch
 
 " highlight tab characters
-set listchars=tab:>-
+set listchars=tab:>-,trail:·
 highlight SpecialKey guifg=red ctermfg=red
 set list
 
-packadd! dracula 
+" netrw file browser
+let g:netrw_liststyle = 3
+let g:netrw_winsizse = 25
+
+packadd! dracula
 syntax enable
 colorscheme dracula

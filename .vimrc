@@ -74,6 +74,9 @@ let mapleader = "'"
 
 " remove highlights after a search
 map <leader>h :noh<CR>
+" reload file and discard any local changes
+map <leader>r :edit!<CR>
+
 
 
 
@@ -90,6 +93,8 @@ set list
 " netrw file browser
 let g:netrw_liststyle = 3
 let g:netrw_winsizse = 25
+" shortcut to open netrw file explore, only works in normal mode
+nnoremap <leader>dd :Lexplore<CR>
 
 packadd! dracula
 syntax enable

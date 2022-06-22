@@ -86,7 +86,7 @@ set incsearch
 set hlsearch
 
 " highlight tab characters
-set listchars=tab:>-,trail:·
+set listchars=tab:࿊,trail:·
 highlight SpecialKey guifg=red ctermfg=red
 set list
 

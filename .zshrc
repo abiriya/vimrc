@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/abiria/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -14,8 +14,8 @@ ZSH_THEME="arrow"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
 #FAV THEMES
-#/home/abiria/.oh-my-zsh/themes/gallifrey.zsh-theme
-#/home/abiria/.oh-my-zsh/themes/fox.zsh-theme
+#~/.oh-my-zsh/themes/gallifrey.zsh-theme
+#~/.oh-my-zsh/themes/fox.zsh-theme
 
 #user aliases
 alias py3=python3
@@ -30,7 +30,7 @@ alias arm-objcopy=arm-none-eabi-objcopy
 
 #arm-gcc path
 export PATH=$PATH:~/gcc-arm/gcc-arm-none-eabi-9-2019-q4-major/bin
-export PATH=$PATH:/home/abiria/.local/bin
+export PATH=$PATH:~/.local/bin
 #
 #
 #
